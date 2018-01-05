@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
-    <div class="wrapper heroBanner">
+    <div class="wrapper heroBanner" id="home">
         <header>
             <h1>What's Happening?</h1>
             <p class="description">Search your city for events through Ticketmaster's Discovery API</p>
@@ -42,8 +42,9 @@
         </main>
     </div>
     <div class="wrapper searchResults">
-        <!-- <nav>
-            <form action="" class="secondarySubmission">
+        <header class="resultsHeading">
+            <h3>Your Results</h3>
+            <!-- <form action="" class="secondarySubmission">
                 <div class="cityInput">
                     <label for="city">Enter a city:</label>
                     <input type="text" id="city" placeholder="Enter city" required>
@@ -63,13 +64,14 @@
                     </select>
                 </div>
                 <input type="submit">
-            </form>
-        </nav> -->
+            </form> -->
+        </header>
         <div class="container"></div>
-        <a href="index.html">Top</a>
+        <a href="#home">Redo Search</a>
         
     </div>
     <script src='https://code.jquery.com/jquery-3.2.1.min.js' integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4='crossorigin='anonymous'></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-smooth-scroll/2.1.2/jquery.smooth-scroll.min.js"></script>
     <script src='scripts/script.js'></script>
 </body>
 </html>

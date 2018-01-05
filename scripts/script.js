@@ -34,7 +34,7 @@ appLocate.displayResults = function() {
     $('.mainSubmission').on('submit', function(e) {
         e.preventDefault();
         $('.searchResults').show();
-        $('html').animate({scrollTop: $('.searchResults').offset().top}, 500);
+        $('html').animate({scrollTop: $('.searchResults').offset().top}, 1000);
         // $('.mainSubmission').hide();
     });
 };
@@ -87,6 +87,16 @@ appLocate.displayEvents = function(eventArray) {
     });
 };
 
+appLocate.goHome = function() {
+    $('a').on('click', (e) => {
+        e.preventDefault();
+        console.log('clicked');
+    });
+    $('a').smoothScroll({
+        speed: 1000
+    });
+};
+
 // appLocate.wishlist = function(selectedEvent) {
 //     let selectionArray = [];
 //     $('button').on('click', () => {
@@ -98,6 +108,7 @@ appLocate.displayEvents = function(eventArray) {
 appLocate.init = function() {
     appLocate.displayResults();
     appLocate.getCity();
+    appLocate.goHome();
 };
 
 $(function() {

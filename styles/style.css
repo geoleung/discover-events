@@ -69,18 +69,24 @@ section label, section input, section select {
     justify-content: space-between;
 }
 
-nav {
-    display: flex;
-    background: #2B1F3A;
-    font-size: 2.5rem;
-    padding: 20px 0;
+h3 {
+    margin: 0;
+    font-size: 4rem;
 }
 
-form.secondarySubmission {
+.resultsHeading {
+    display: flex;
+    justify-content: center;
+    background: #2B1F3A;
+    font-size: 2.5rem;
+    padding: 10px 0;
+}
+
+/* form.secondarySubmission {
     width: 100%;
     display: flex;
     justify-content: space-around;
-}
+} */
 
 .container {
     display: flex;
@@ -98,6 +104,7 @@ form.secondarySubmission {
     border: 1px solid #FFF;
     display: flex;
     flex-direction: column;
+    justify-content: flex-end;
     align-items: center;
     margin: 5px;
 }
@@ -125,15 +132,24 @@ a {
     text-decoration: none;
     font-size: 2.5rem;
     color: #FFF;
-    border: 5px solid #FFF;
+    /* border: 5px solid #FFF; */
     padding: 10px 20px;
     align-self: center;
 }
 
+@media (max-width: 1600px) {
+    /* .resultsHeading {
+        padding: 10px 0;
+    } */
+    /* h3 {
+        font-size: 4rem;
+    } */
+}
+
 @media (max-width: 1400px) {
-    nav {
-        font-size: 1.9rem;
-    }
+    /* h3 {
+        font-size: 3.8rem;
+    } */
     h2 {
         font-size: 2.4rem;
     }
@@ -146,9 +162,7 @@ a {
 }
 
 @media (max-width: 1050px) {
-    nav {
-        display: none;
-    }
+    
     
 }
 
