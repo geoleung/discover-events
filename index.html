@@ -12,8 +12,8 @@
 <body>
     <div class="wrapper heroBanner" id="home">
         <header>
-            <h1>What's Happening?</h1>
-            <p class="description">Search your city for events through Ticketmaster's Discovery API</p>
+            <h1>Discover Events</h1>
+            <p class="description">Search for upcoming events in a Canadian city happening on and after a specified date</p>
         </header>
         <main>
             <form action="" class="mainSubmission">
@@ -23,11 +23,11 @@
                         <input type="text" id="city" placeholder="Enter city" required>
                     </div>
                     <div class="dateInput">
-                        <label for="startDate">Select a date and time:</label>
+                        <label for="startDate">Select a date:</label>
                         <input type="date" id="startDate">
                     </div>
                     <div class="categoryInput">
-                        <label for="categories">Choose a category:</label>
+                        <label for="categories">Filter categories:</label>
                         <select name="categories" id="categories">
                             <option value="any">Any</option>
                             <option value="arts">Arts & Theatre</option>
@@ -40,31 +40,11 @@
                 <input type="submit">
             </form>
         </main>
+        <h4>Powered by Ticketmaster's Discovery API</h4>
     </div>
-    <div class="wrapper searchResults">
+    <div class="searchResults">
         <header class="resultsHeading">
             <h3>Your Results</h3>
-            <!-- <form action="" class="secondarySubmission">
-                <div class="cityInput">
-                    <label for="city">Enter a city:</label>
-                    <input type="text" id="city" placeholder="Enter city" required>
-                </div>
-                <div class="dateInput">
-                    <label for="startDate">Select a date and time:</label>
-                    <input type="date" id="startDate">
-                </div>
-                <div class="categoryInput">
-                    <label for="categories">Choose a category:</label>
-                    <select name="categories" id="categories">
-                        <option value="any">Any</option>
-                        <option value="arts">Arts & Theatre</option>
-                        <option value="film">Film</option>
-                        <option value="music">Music</option>
-                        <option value="sports">Sports</option>
-                    </select>
-                </div>
-                <input type="submit">
-            </form> -->
         </header>
         <div class="container"></div>
         <a href="#home">Redo Search</a>

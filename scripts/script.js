@@ -97,14 +97,6 @@ appLocate.goHome = function() {
     });
 };
 
-// appLocate.wishlist = function(selectedEvent) {
-//     let selectionArray = [];
-//     $('button').on('click', () => {
-//         selectionArray.push(selectedEvent);
-//     });
-//     console.log(selectionArray);
-// };
-
 appLocate.init = function() {
     appLocate.displayResults();
     appLocate.getCity();
