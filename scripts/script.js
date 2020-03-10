@@ -7,6 +7,11 @@ const segmentCategories = [
 
 const appLocate = {};
 
+const today = new Date();
+let currMonth = today.getMonth() + 1;
+let currDay = today.getDate();
+let currYear = today.getFullYear();
+
 appLocate.key = 'vdvmGy6E9WEAZoQwyOCnat446poixTTz';
 
 appLocate.getEvents = function(location, date, category) {
@@ -23,7 +28,7 @@ appLocate.getEvents = function(location, date, category) {
             classificationName: category
         }
     }).then(function(res) {
-        console.log(res);
+        // console.log(res);
         
         appLocate.displayEvents(res._embedded.events);
     });
@@ -43,11 +48,12 @@ appLocate.getCity = function() {
     $('form').on('submit', function(e) {
         e.preventDefault();
         let cityName = $('#city').val();
+        console.log($('#city').val());
         let chosenDate = new Date($('#startDate').val());
         chosenDate.setHours(24, 00, 00, 000);
         let stringDate = chosenDate.toISOString().split('.')[0]+"Z";
-        // console.log($('#startDate').val());
-        // console.log(chosenDate.toISOString().split('.')[0]+"Z");
+        console.log($('#startDate').val());
+        console.log(chosenDate.toISOString().split('.')[0]+"Z");
         let segment = $('#categories').find(':selected').text();
             if (segment === 'Any') {
                 segment = '';
@@ -82,7 +88,7 @@ appLocate.displayEvents = function(eventArray) {
     
     $('button').on('click', function() {
         let goToPage = $(this).siblings('a').attr('href');
-        console.log(goToPage);
+        // console.log(goToPage);
         window.open(goToPage);
     });
 };
@@ -90,7 +96,12 @@ appLocate.displayEvents = function(eventArray) {
 appLocate.goHome = function() {
     $('a').on('click', (e) => {
         e.preventDefault();
-        console.log('clicked');
+        // location.reload();
+        // console.log('clicked');
+        $('#mainForm').find('#city').val([]);
+        $('#mainForm').find('#startDate').val([]);
+        // $('#mainForm').find('#categories').val([]);
+        // console.log($('#city').val());
     });
     $('a').smoothScroll({
         speed: 1000
@@ -98,9 +109,12 @@ appLocate.goHome = function() {
 };
 
 appLocate.init = function() {
+    // $('#startDate').val(new Date().toDateString());
     appLocate.displayResults();
     appLocate.getCity();
     appLocate.goHome();
+    // console.log(new Date().toDateString());
+    // console.log(currMonth, currDay, currYear);
 };
 
 $(function() {
